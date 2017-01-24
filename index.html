@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Chat App</title>
+    <!--Add css file-->
+    <link rel="stylesheet" href="style.css">
+    <!--add js file-->
+    <script src="http://underscorejs.org/underscore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <script src="http://backbonejs.org/backbone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="app.js"></script>
+
+    <script type="x-mustache-template" id="chat-template"> 
+        <h2>{{ from }}</h2>
+        <p>Message: {{ message }}</p>
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Marching Forward Chat App</h1>
+    </header>
+
+    <main>
+        <h2>Important Convo</h2>
+        <section id="chatMessages"></section>   
+    </main>
+
+    <footer>
+        <input type="text" id="chat" placeholder="what's up?">
+        <input type="text" id="userName" placeholder="name">
+        <button class="button"><span>Send<span></button>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+/* Include Foundation*/
+@import '../node_modules/foundation-sites/scss/foundation'; //because its in a scss folder
+// @import "foundation/components/buttons";
+// @import "foundation/components/forms";
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+
+
+body {
+    background-color: mediumseagreen;
+}
+
+header {
+    @include grid-row();
+    text-align: center;
+}
+
+
+h2 {
+        text-align: center;
+    }    
+    
+
+#chatMessages {
+        background: #FFFFFF;
+        padding: 200px;
+        box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
+        border-radius: 6px;
+        margin-left: 60px;
+        margin-right: 60px;
+    };
+
+footer {
+    @include grid-row();
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    #chat {
+        @include grid-column(3);
+        padding: 1% 4.5%;
+        margin-left: 30px;
+        
+    }
+
+    #userName{
+        @include grid-column(3);
+        padding: 1% 4.5%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .button{
+        @include grid-column(3);
+
+        border-radius: 2px;
+        background-color: white;
+        border: none;
+        color: mediumseagreen;
+        text-align: center;
+        font-size: 28px;
+        padding: 5px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin-left: 3px;
+    }
+
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+} 
+
+}
+
