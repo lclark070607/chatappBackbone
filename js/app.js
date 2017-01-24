@@ -30,7 +30,7 @@ Backbone.sync = function (method, model) {
 
 
 
-const ChatModel = require('./models/chat');
+// const ChatModel = require('./models/chat');
 const ChatLog = require('./models/chatLog');
 const ChatView = require('./views/chat');
 
@@ -42,6 +42,7 @@ window.addEventListener('load', function () {
     });
 
     view.render();
+    console.log('this list has been populated');
 });
 
 

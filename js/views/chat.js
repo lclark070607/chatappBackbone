@@ -9,6 +9,7 @@ module.exports = Backbone.View.extend({
 
     events: {
         'click .button': 'updateChat',
+        'click .button': 'addChat',
     },
 
     //handler for the button click
@@ -18,6 +19,11 @@ module.exports = Backbone.View.extend({
 
         this.model.createNew(newChat);
         this.model.createNew(newUser);
+    },
+
+    sendChat: function () {
+        let stringChat = document.querySelector('#chat').value;
+        this.model.updateChat(stringChat);
     },
 
     render: function () {
